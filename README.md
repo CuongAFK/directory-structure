@@ -13,4 +13,4 @@ If you are developing a production application, we recommend using TypeScript an
 "# LinhQuanTinhChien_V2" 
 
 
-[img](https://github.com/CuongAFK/Github-Upload-Images/blob/main/LinhQuanTinhChien_V2.png)
+![img](https://github.com/CuongAFK/Github-Upload-Images/blob/main/LinhQuanTinhChien_V2.png)
