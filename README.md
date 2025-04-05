@@ -1,15 +1,108 @@
-# React + Vite
+# Project Structure Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This document outlines the structure of our full-stack web application, consisting of both frontend (React + Vite) and backend (Node.js + Express) components.
 
-Currently, two official plugins are available:
+## Frontend Structure
+```plaintext
+src/
+├── assets/
+│   ├── icons/              # Icon assets
+│   └── images/             # Image assets
+├── components/
+│   └── Button/
+│       ├── Button.jsx      # Button component
+│       ├── Button.module.css
+│       └── index.js
+├── contexts/
+│   └── GameContext.js      # Game state management
+├── hooks/
+│   └── useGameLogic.js     # Custom game logic hook
+├── pages/
+│   └── HomePage/
+│       ├── HomePage.jsx    # Main homepage component
+│       ├── HomePage.module.css
+│       └── index.js
+├── services/
+│   ├── authService.js      # Authentication service
+│   └── gameService.js      # Game-related API calls
+├── utils/                  # Utility functions
+├── App.jsx                 # Root component
+├── App.css                 # Global styles
+├── index.css              
+└── main.jsx               # Entry point
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Frontend Components
+- **assets**: Static resources
+- **components**: Reusable UI components
+- **contexts**: React Context providers
+- **hooks**: Custom React hooks
+- **pages**: Page-level components
+- **services**: API integration layer
+- **utils**: Helper functions and utilities
 
-## Expanding the ESLint configuration
+## Backend Structure
+```plaintext
+backend/
+├── config/
+│   ├── database.js         # Database configuration
+│   └── socket.js          # WebSocket setup
+├── controllers/
+│   ├── authController.js   # Authentication logic
+│   └── gameController.js   # Game management
+├── models/
+│   ├── GameSession.js      # Game session schema
+│   └── User.js            # User schema
+├── routes/
+│   ├── authRoutes.js      # Authentication endpoints
+│   └── socketRoutes.js    # WebSocket routes
+├── services/
+│   ├── AuthService.js     # Authentication service
+│   ├── GameService.js     # Game logic service
+│   └── GameEntities/
+│       ├── GameBoard.js   # Game board logic
+│       ├── Player.js      # Player entity
+│       └── Unit.js        # Game unit logic
+├── .env                   # Environment variables
+└── server.js             # Entry point
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# LinhQuanTinhChien_V2" 
+### Key Backend Components
+- **config**: Application configuration
+- **controllers**: Request handlers
+- **models**: Database schemas
+- **routes**: API endpoint definitions
+- **services**: Business logic layer
+- **GameEntities**: Game-specific classes
 
+## Tech Stack
+- Frontend: React, Vite, TailwindCSS
+- Backend: Node.js, Express
+- Database: MongoDB
+- Real-time: WebSocket
 
+## Getting Started
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   # Frontend
+   cd frontend
+   npm install
+
+   # Backend
+   cd ../backend
+   npm install
+   ```
+3. Set up environment variables
+4. Start development servers:
+   ```bash
+   # Frontend
+   npm run dev
+
+   # Backend
+   npm run start
+   ```
+
+## Contributing
+Please follow the existing structure when adding new features or components.
